@@ -7,14 +7,14 @@ import 'storage_info_card.dart';
 
 class StorageDetails extends StatelessWidget {
   const StorageDetails({
-    Key key,
-    @required this.pairCharSelectionData,
+    Key key
   }) : super(key: key);
-
-  final List<PieChartSectionData> pairCharSelectionData;
 
   @override
   Widget build(BuildContext context) {
+
+      var pairCharSelectionData = data;
+
     return Container(
       padding: EdgeInsets.all(defaultPadding),
       decoration: BoxDecoration(
@@ -61,5 +61,34 @@ class StorageDetails extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  List<PieChartSectionData> get data {
+    return [
+      PieChartSectionData(
+        value: 15.0,
+      ),
+      PieChartSectionData(
+        color: Colors.blue,
+        value: 20.0,
+        showTitle: false,
+      ),
+      PieChartSectionData(
+        color: Colors.green,
+        value: 25.0,
+        radius: 40,
+      ),
+      PieChartSectionData(
+        color: Colors.yellow,
+        value: 12.0,
+        showTitle: false,
+      ),
+      PieChartSectionData(
+        color: Colors.pinkAccent,
+        value: 40.0,
+        showTitle: false,
+        radius: 33,
+      ),
+    ];
   }
 }
