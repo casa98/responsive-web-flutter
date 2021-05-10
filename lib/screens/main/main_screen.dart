@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:responsive_web_flutter/screens/dashboard/dashboard_screen.dart';
 
-import 'components/side_menu.dart';
+import '../main/components/side_menu.dart';
 
 class MainScreen extends StatelessWidget {
   @override
@@ -9,6 +9,7 @@ class MainScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
               flex: 1,
@@ -16,10 +17,7 @@ class MainScreen extends StatelessWidget {
             ),
             Expanded(
               flex: 5,
-              child: Container(
-                color: Colors.blue,
-                
-              ),
+              child: DashboardScreen()
             )
           ],
         )
